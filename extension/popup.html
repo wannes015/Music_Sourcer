@@ -1,0 +1,36 @@
+<link href="popup.css" rel="stylesheet" type="text/css"/>
+<script type="module" src="popup.js"></script>
+
+<div class="bg-white flex flex-col" style="width: 36rem">
+    <div class="bg-indigo-600 p-4">
+        <span class="text-lg font-black text-indigo-300">Music Sourcer</span>
+    </div>
+    <form class="flex flex-col gap-4 p-4" method="post" action="http://localhost:3000/conv">
+        <input id="url" name="url" hidden>
+        <div class="flex flex-col">
+            <span class="text-xs mb-0.5 font-semibold text-gray-600">title</span>
+            <input id="title" class="focus:outline-none px-2 py-1 text-base border rounded focus:border-indigo-500" type="text" name="title">
+        </div>
+        <div class="flex flex-col">
+            <span class="text-xs mb-0.5 font-semibold text-gray-600">artist</span>
+            <input id="artist" class="focus:outline-none px-2 py-1 text-base border rounded focus:border-indigo-500" type="text" name="artist">
+        </div>
+        <div class="flex flex-col">
+            <span class="text-xs mb-0.5 font-semibold text-gray-600">genre</span>
+            <select class="focus:outline-none px-2 py-1 text-base border rounded focus:border-indigo-500" name="genre">
+                <option value="Drum & Bass" selected>Drum & Bass</option>
+                <option value="Dance">Dance</option>
+                <option value="Tech House">Tech House</option>
+                <option value="House">House</option>
+                <option value="Techno">Techno</option>
+                <option value="Hardstyle">Hardstyle</option>
+                <option value="Melodic Techno">Melodic Techno</option>
+                <option value="Pop">Pop</option>
+                <option value="Hiphop / Rap">Hiphop / Rap</option>
+            </select>
+        </div>
+        <button class="bg-indigo-600 p-2 rounded cursor-pointer">
+            <span class="font-black text-white text-base">get it</span>
+        </button>
+    </form>
+</div>
