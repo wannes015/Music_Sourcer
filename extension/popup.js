@@ -4,6 +4,6 @@ const artistInput = document.querySelector("#artist")
 
 chrome.runtime.sendMessage({type: 'from_popup'}, (response) => {
     urlInput.value = response.url
-    titleInput.value = response.title
-    artistInput.value = response.artist
+    titleInput.value = response.title.trim()
+    artistInput.value = response.artist.trim()
 });
